@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Dto", "Inventory.Dto\Inventory.Dto.csproj", "{CF4302D8-29E6-4B16-BE98-9E57EB923AC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Dto", "Inventory.Dto\Inventory.Dto.csproj", "{CF4302D8-29E6-4B16-BE98-9E57EB923AC6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dto", "Dto", "{2746ABA1-9E57-4776-846E-E3501F64FAD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{1EE76557-8F6D-4465-9EC4-00E8E88D6D5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Business.Contracts", "Inventory.Business.Contracts\Inventory.Business.Contracts.csproj", "{860D4800-73C5-40B1-A583-CDAFAE838B5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{CF4302D8-29E6-4B16-BE98-9E57EB923AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF4302D8-29E6-4B16-BE98-9E57EB923AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4302D8-29E6-4B16-BE98-9E57EB923AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860D4800-73C5-40B1-A583-CDAFAE838B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860D4800-73C5-40B1-A583-CDAFAE838B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860D4800-73C5-40B1-A583-CDAFAE838B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860D4800-73C5-40B1-A583-CDAFAE838B5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CF4302D8-29E6-4B16-BE98-9E57EB923AC6} = {2746ABA1-9E57-4776-846E-E3501F64FAD8}
+		{860D4800-73C5-40B1-A583-CDAFAE838B5A} = {1EE76557-8F6D-4465-9EC4-00E8E88D6D5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D60B3F8-EFAC-48A8-9025-2A8F45E57523}
