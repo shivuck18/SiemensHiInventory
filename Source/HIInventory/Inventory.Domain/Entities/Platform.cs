@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Inventory.Domain
+namespace Inventory.Domain.Entities
 {
     class Platform
     {
