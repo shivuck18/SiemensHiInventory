@@ -61,7 +61,7 @@ namespace Inventory.UI
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Platform}/{action=Index}/{id?}");
             });
         }
     }

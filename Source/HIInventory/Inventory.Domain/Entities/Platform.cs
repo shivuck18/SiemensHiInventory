@@ -10,8 +10,8 @@ namespace Inventory.Domain.Entities
         [Key]
         public int Id { get; set; }
         public string PlatformName { get; set; }
-        public string PlatformType { get; set; }
+        public string ICType { get; set; }
 
-        public Platform platform { get; set; }
+       // public Platform platform { get; set; }
     }
 }
