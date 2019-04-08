@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Inventory.Data\Inventory.Data.csproj" />
+    <ProjectReference Include="..\Inventory.Repository.Contracts\Inventory.Repository.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
