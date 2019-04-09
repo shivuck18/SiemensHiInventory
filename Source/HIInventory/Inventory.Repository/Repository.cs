@@ -24,8 +24,9 @@ namespace Inventory.Repository
             _databaseContext.SaveChanges();
         }
 
-        public void Delete(T entity)
+        public void Delete(int id)
         {
+            var entity = _databaseContext.Set<T>().Find(id);
             _databaseContext.Set<T>().Remove(entity);
             _databaseContext.SaveChanges();
         }

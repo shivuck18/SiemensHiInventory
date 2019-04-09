@@ -2,32 +2,32 @@
 using Inventory.Domain.Entities;
 using Inventory.Repository;
 using Inventory.Repository.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UnitOfWork
 {
     class UnitOfWork : IUnitOfWork
     {
-        private IRepository<Platform> _repository;
+        private IRepository<Platform> _platformRepository;
         private DatabaseContext _databaseContext;
 
         public UnitOfWork(DatabaseContext databaseContext)
         {
             _databaseContext = databaseContext;
         }
-        public IRepository<Platform> Repository
+
+        public IRepository<Platform> PlatformRepository
         {
             get
             {
-                if (_repository == null)
+                if (_platformRepository == null)
                 {
-                    _repository = new Repository<Platform>(_databaseContext);
+                    _platformRepository = new Repository<Platform>(_databaseContext);
                 }
-                return _repository;
+
+                return _platformRepository;
             }
         }
+
         public void Save()
         {
             _databaseContext.SaveChanges();
