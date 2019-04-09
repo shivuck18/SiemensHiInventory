@@ -12,7 +12,7 @@
     <ProjectReference Include="..\Inventory.Business.Contracts\Inventory.Business.Contracts.csproj" />
     <ProjectReference Include="..\Inventory.Dto\Inventory.Dto.csproj" />
     <ProjectReference Include="..\Inventory.Repository.Contracts\Inventory.Repository.Contracts.csproj" />
-    <ProjectReference Include="..\UnitOfWork\UnitOfWork.csproj" />
+    <ProjectReference Include="..\UnitOfWork\Inventory.UnitOfWork.csproj" />
   </ItemGroup>
 
 </Project>

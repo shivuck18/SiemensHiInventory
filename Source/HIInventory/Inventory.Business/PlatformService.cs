@@ -1,8 +1,9 @@
 ﻿using Inventory.Business.Contracts;
 using Inventory.Domain.Entities;
 using Inventory.Dto;
+using Inventory.UnitOfWork;
 using System.Collections.Generic;
-using UnitOfWork;
+
 
 namespace Inventory.Business
 {
