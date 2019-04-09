@@ -9,7 +9,7 @@ namespace UnitOfWork
 {
     public interface IUnitOfWork
     {
-        IRepository<Platform> Repository { get; }
+        IRepository<Platform> PlatformRepository { get; }
         void Save();
     }
 }

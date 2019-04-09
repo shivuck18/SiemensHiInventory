@@ -8,4 +8,11 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Business.Contracts\Inventory.Business.Contracts.csproj" />
+    <ProjectReference Include="..\Inventory.Dto\Inventory.Dto.csproj" />
+    <ProjectReference Include="..\Inventory.Repository.Contracts\Inventory.Repository.Contracts.csproj" />
+    <ProjectReference Include="..\UnitOfWork\UnitOfWork.csproj" />
+  </ItemGroup>
+
 </Project>
