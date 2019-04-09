@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitOfWork
+namespace Inventory.UnitOfWork
 {
     class UnitOfWork : IUnitOfWork
     {
