@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Domain", "Invento
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.UI", "Inventory.UI\Inventory.UI.csproj", "{1C55C62B-1C9E-4353-A90E-C679045C8787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWork", "UnitOfWork\UnitOfWork.csproj", "{AB426868-E0C1-4769-91F4-8099A2BCE459}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.UnitOfWork", "UnitOfWork\Inventory.UnitOfWork.csproj", "{AB426868-E0C1-4769-91F4-8099A2BCE459}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

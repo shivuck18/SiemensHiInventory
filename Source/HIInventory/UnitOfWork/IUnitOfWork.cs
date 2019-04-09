@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitOfWork
+namespace Inventory.UnitOfWork
 {
     public interface IUnitOfWork
     {

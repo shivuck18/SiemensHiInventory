@@ -3,7 +3,7 @@ using Inventory.Domain.Entities;
 using Inventory.Repository;
 using Inventory.Repository.Contracts;
 
-namespace UnitOfWork
+namespace Inventory.UnitOfWork
 {
     class UnitOfWork : IUnitOfWork
     {
