@@ -11,7 +11,7 @@ namespace Inventory.Repository.Contracts
 
         void Update(T entity);
 
-        void Delete(int id);
+        void Delete(T entity);
 
         IList<T> GetAll();
 
