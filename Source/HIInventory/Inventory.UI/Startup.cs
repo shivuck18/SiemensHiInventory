@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Inventory.Business;
+using Inventory.Business.Contracts;
 using Inventory.Data;
+using Inventory.Domain.Entities;
+using Inventory.Repository;
+using Inventory.Repository.Contracts;
+using Inventory.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,6 +44,10 @@ namespace Inventory.UI
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            ////IUnitOfWork
+            services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
+            services.AddTransient<IPlatformService, PlatformService>();
+            services.AddTransient<IRepository<Platform>, Repository<Platform>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

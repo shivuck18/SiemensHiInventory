@@ -3,20 +3,21 @@ using Inventory.Data;
 using Inventory.Dto;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using Inventory.Business.Contracts;
 
 namespace Inventory.UI.Controllers
 {
     public class PlatformController : Controller
     {
 
-        //private readonly IPlatformService _platformService;
+        private readonly IPlatformService _platformService;
 
         // created object of platformService 
 
-        //public PlatformController(IPlatformService platformService)
-        //{
-        //    _platformService = platformService;
-        //}
+        public PlatformController(IPlatformService platformService)
+        {
+            _platformService = platformService;
+        }
 
 
         List<PlatformDto> platforms = new List<PlatformDto>();
@@ -25,7 +26,7 @@ namespace Inventory.UI.Controllers
         {
             //return View(_platformService.GettAll());
 
-            PopulateData();
+            //PopulateData();
             return View(platforms);
         }
 
@@ -52,7 +53,7 @@ namespace Inventory.UI.Controllers
         {
             //it will call _platformService interface method and edit with respect to id
             // _platformService.edit(id);
-            PopulateData();
+            //PopulateData();
             var platform = platforms.FirstOrDefault(x => x.Id == id);
             return View("Add", platform);
         }
@@ -65,29 +66,29 @@ namespace Inventory.UI.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private void PopulateData()
-        {
-            platforms.Add(new PlatformDto()
-            {
-                Id = 1,
-                PlatformName = "Test Platform",
-                IcType = "Test Ic Type"
-            });
+        //private void PopulateData()
+        //{
+        //    platforms.Add(new PlatformDto()
+        //    {
+        //        Id = 1,
+        //        PlatformName = "Test Platform",
+        //        IcType = "Test Ic Type"
+        //    });
 
-            platforms.Add(new PlatformDto()
-            {
-                Id = 2,
-                PlatformName = "Test Platform 2",
-                IcType = "Test Ic Type 2"
-            });
+        //    platforms.Add(new PlatformDto()
+        //    {
+        //        Id = 2,
+        //        PlatformName = "Test Platform 2",
+        //        IcType = "Test Ic Type 2"
+        //    });
 
-            platforms.Add(new PlatformDto()
-            {
-                Id = 3,
-                PlatformName = "Test Platform 3",
-                IcType = "Test Ic Type 3"
-            });
-        }
+        //    platforms.Add(new PlatformDto()
+        //    {
+        //        Id = 3,
+        //        PlatformName = "Test Platform 3",
+        //        IcType = "Test Ic Type 3"
+        //    });
+        //}
 
     }
 }

@@ -5,7 +5,7 @@ using Inventory.Repository.Contracts;
 
 namespace Inventory.UnitOfWork
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private IRepository<Platform> _platformRepository;
         private DatabaseContext _databaseContext;

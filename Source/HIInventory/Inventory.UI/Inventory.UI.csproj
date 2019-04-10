@@ -11,8 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Inventory.Business.Contracts\Inventory.Business.Contracts.csproj" />
+    <ProjectReference Include="..\Inventory.Business\Inventory.Business.csproj" />
     <ProjectReference Include="..\Inventory.Data\Inventory.Data.csproj" />
     <ProjectReference Include="..\Inventory.Dto\Inventory.Dto.csproj" />
+    <ProjectReference Include="..\Inventory.Repository.Contracts\Inventory.Repository.Contracts.csproj" />
+    <ProjectReference Include="..\Inventory.Repository\Inventory.Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>
