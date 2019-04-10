@@ -12,83 +12,56 @@ namespace Inventory.UI.Controllers
 
         private readonly IPlatformService _platformService;
 
-        // created object of platformService 
-
+       
         public PlatformController(IPlatformService platformService)
         {
             _platformService = platformService;
         }
 
-
-        List<PlatformDto> platforms = new List<PlatformDto>();
-
+        /// <summary>
+        /// function to return list of platform 
+        /// </summary>
+        /// <returns>list of platform from database</returns>
         public IActionResult Index()
         {
-            //return View(_platformService.GettAll());
-
-            //PopulateData();
-            return View(platforms);
+            return View(_platformService.GetAll());
         }
 
+        /// <summary>
+        /// function for add 
+        /// </summary>
+        /// <returns>add page to add new platform</returns>
         public IActionResult Add()
         {
-
             return View();
         }
+
 
         [HttpPost]
         public IActionResult Add(PlatformDto PlatformDto)
         {
-            //databaseContext.HiInventory.Add(PlatformDto);
-            //databaseContext.SaveChanges();
-
-            // IPlatformService.Add(platofrmDto); // TODO Call Business Service
-
-            //_platformService.add(PlatformDto);
-            platforms.Add(PlatformDto);
-            return RedirectToAction("Index");
+            _platformService.Add(PlatformDto);
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Edit(int id)
         {
-            //it will call _platformService interface method and edit with respect to id
-            // _platformService.edit(id);
-            //PopulateData();
-            var platform = platforms.FirstOrDefault(x => x.Id == id);
-            return View("Add", platform);
+           var platform =_platformService.GetById(id);
+             return View(platform);
+        }
+
+        [HttpPost]
+        public IActionResult Save(PlatformDto platformDto)
+        {
+            _platformService.Update(platformDto);
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Delete(int id)
         {
-            //it will call _platformService interface method and delete with respect to id
-            //_platformService.delete(id);
-            //below line will redirect to main page
+            _platformService.Delete(id);
             return RedirectToAction(nameof(Index));
         }
-
-        //private void PopulateData()
-        //{
-        //    platforms.Add(new PlatformDto()
-        //    {
-        //        Id = 1,
-        //        PlatformName = "Test Platform",
-        //        IcType = "Test Ic Type"
-        //    });
-
-        //    platforms.Add(new PlatformDto()
-        //    {
-        //        Id = 2,
-        //        PlatformName = "Test Platform 2",
-        //        IcType = "Test Ic Type 2"
-        //    });
-
-        //    platforms.Add(new PlatformDto()
-        //    {
-        //        Id = 3,
-        //        PlatformName = "Test Platform 3",
-        //        IcType = "Test Ic Type 3"
-        //    });
-        //}
 
     }
 }

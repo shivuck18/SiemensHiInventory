@@ -8,6 +8,6 @@ namespace Inventory.Dto
     {
         public int Id { get; set; }
         public string PlatformName { get; set; }
-        public string IcType { get; set; }
+        public string ICType { get; set; }
     }
 }

@@ -63,7 +63,7 @@ namespace Inventory.Business
             {
                 Id = platformDto.Id,
                 PlatformName = platformDto.PlatformName,
-                ICType = platformDto.IcType,
+                ICType = platformDto.ICType,
             };
 
             return PlatformDomain;
@@ -75,7 +75,7 @@ namespace Inventory.Business
             {
                 Id = platform.Id,
                 PlatformName = platform.PlatformName,
-                IcType = platform.ICType,
+                ICType = platform.ICType,
             };
 
             return PlatformDto;
