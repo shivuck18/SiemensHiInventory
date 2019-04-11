@@ -1,55 +1,82 @@
 ﻿@model IEnumerable<Inventory.Dto.PlatformDto>
+@{ 
+    Layout = null;
+}
+
 <script src="~/lib/jquery/dist/jquery.js"></script>
-<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-<link href="~/css/site.css" rel="stylesheet" />
-<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<link href="~/css/site.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+
 <script type="text/javascript">
     $(document).ready(function () {
-       
+        //$(#"TableId_length").hide()
         $('#TableId').DataTable(
             {
-                "pageLength": 5
+                "pageLength": 5,
+                "sPaginationType": "full_numbers",
+                "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]]
+
             });
+        
 
     });
 </script>
+<style>
+    #TableId_wrapper{
+        width:90%;
+        margin-left:75px;
+    }
+    .margin{
+        margin-left:75px;
+    }
+</style>
 <p>
-    <a asp-action="Add">Add New</a>
+    <a asp-action="Add" class="margin btn btn-default">Add New</a>
 </p>
-<table class="table" id="TableId">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PlatformName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ICType)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PlatformName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ICType)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id },new { @class="btn btn-success"}) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<section>
+    <div class="row">
+        <table class="table" id="TableId">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PlatformName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ICType)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PlatformName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ICType)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-success" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+   
+</section>
