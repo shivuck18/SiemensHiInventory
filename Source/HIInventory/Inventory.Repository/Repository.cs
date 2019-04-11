@@ -21,14 +21,14 @@ namespace Inventory.Repository
         public void Add(T entity)
         {
             _databaseContext.Set<T>().Add(entity);
-            _databaseContext.SaveChanges();
+            //_databaseContext.SaveChanges();
         }
 
         public void Delete(int id)
         {
             var entity = _databaseContext.Set<T>().Find(id);
             _databaseContext.Set<T>().Remove(entity);
-            _databaseContext.SaveChanges();
+            //_databaseContext.SaveChanges();
         }
 
         public IList<T> GetAll()
@@ -44,7 +44,7 @@ namespace Inventory.Repository
         public void Update(T entity)
         {
             _databaseContext.Entry(entity).State = EntityState.Modified;
-            _databaseContext.SaveChanges();
+            //_databaseContext.SaveChanges();
         }
     }
 }
