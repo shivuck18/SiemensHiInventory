@@ -44,7 +44,8 @@ namespace Inventory.UI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
             services.AddTransient<IPlatformService, PlatformService>();
-            services.AddTransient<IRepository<Platform>, Repository<Platform>>();
+            //services.AddTransient<IRepository<Platform>, Repository<Platform>>();  //direct injection should not be used
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
