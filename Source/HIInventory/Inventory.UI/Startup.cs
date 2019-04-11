@@ -41,10 +41,7 @@ namespace Inventory.UI
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            ////IUnitOfWork
             services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
             services.AddTransient<IPlatformService, PlatformService>();
             services.AddTransient<IRepository<Platform>, Repository<Platform>>();
