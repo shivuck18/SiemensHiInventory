@@ -23,7 +23,7 @@ namespace Inventory.Business
             _unitOfWork.Save();
         }
 
-        //doubt..
+       
         public List<PlatformDto> GetAll()
         {
             var platforms = _unitOfWork.PlatformRepository.GetAll();
@@ -37,7 +37,7 @@ namespace Inventory.Business
             return platformDtos;
         }
 
-        //verify with ganesh 
+       
         public PlatformDto GetById(int id)
         {
             var platform = _unitOfWork.PlatformRepository.GetById(id);

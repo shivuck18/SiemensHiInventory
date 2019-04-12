@@ -1,7 +1,5 @@
 ﻿@model IEnumerable<Inventory.Dto.PlatformDto>
-@{ 
-    Layout = null;
-}
+
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
@@ -15,7 +13,6 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        //$(#"TableId_length").hide()
         $('#TableId').DataTable(
             {
                 "pageLength": 5,
