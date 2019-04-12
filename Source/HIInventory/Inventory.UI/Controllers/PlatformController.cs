@@ -15,7 +15,7 @@ namespace Inventory.UI.Controllers
        
         public PlatformController(IPlatformService platformService)
         {
-            _platformService = platformService;
+               _platformService = platformService;
         }
 
         /// <summary>

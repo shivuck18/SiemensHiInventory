@@ -35,17 +35,19 @@ namespace Inventory.UI
             services.AddEntityFrameworkNpgsql().AddDbContext<DatabaseContext>(options => {
                 options.UseNpgsql(Configuration.GetConnectionString("ConnectionStr"));
             });
+
+            services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
+            services.AddTransient<IPlatformService, PlatformService>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
-            services.AddTransient<IPlatformService, PlatformService>();
-            //services.AddTransient<IRepository<Platform>, Repository<Platform>>();  //direct injection should not be used
-            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
