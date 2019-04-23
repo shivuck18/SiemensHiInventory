@@ -1,6 +1,7 @@
-﻿using Inventory.Dto;
+﻿using Inventory.Business.Contracts;
+using Inventory.Dto;
 using Microsoft.AspNetCore.Mvc;
-using Inventory.Business.Contracts;
+
 
 namespace Inventory.UI.Controllers
 {
