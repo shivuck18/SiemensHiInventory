@@ -1,4 +1,4 @@
-﻿using Inventory.Domain.Entities;
+﻿
 using Inventory.Dto;
 using System.Collections.Generic;
 

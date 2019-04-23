@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using Inventory.Data;
-using Inventory.Dto;
+﻿using Inventory.Dto;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using Inventory.Business.Contracts;
 
 namespace Inventory.UI.Controllers

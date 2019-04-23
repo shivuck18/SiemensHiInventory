@@ -1,6 +1,5 @@
 ﻿using Inventory.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace Inventory.Data
 {

@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Dto", "Inventory.Dto\Inventory.Dto.csproj", "{CF4302D8-29E6-4B16-BE98-9E57EB923AC6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB426868-E0C1-4769-91F4-8099A2BCE459} = {AB426868-E0C1-4769-91F4-8099A2BCE459}
+		{D97E5575-C6E9-49DC-A8BF-5CA4D5F45DC6} = {D97E5575-C6E9-49DC-A8BF-5CA4D5F45DC6}
+		{D82417C5-F323-4DF4-B6D7-A749F09D7829} = {D82417C5-F323-4DF4-B6D7-A749F09D7829}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dto", "Dto", "{2746ABA1-9E57-4776-846E-E3501F64FAD8}"
 EndProject
@@ -24,6 +29,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Repository.Contracts", "Inventory.Repository.Contracts\Inventory.Repository.Contracts.csproj", "{D97E5575-C6E9-49DC-A8BF-5CA4D5F45DC6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Repository", "Inventory.Repository\Inventory.Repository.csproj", "{D82417C5-F323-4DF4-B6D7-A749F09D7829}"
+	ProjectSection(ProjectDependencies) = postProject
+		{51BE4B84-C77E-4636-98C1-EE1E9E471AB0} = {51BE4B84-C77E-4636-98C1-EE1E9E471AB0}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Repository.Test", "Inventory.Repository.Test\Inventory.Repository.Test.csproj", "{CE852117-79ED-4646-AE29-5A6A4D2505F6}"
 EndProject
@@ -33,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Domain", "Invento
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.UI", "Inventory.UI\Inventory.UI.csproj", "{1C55C62B-1C9E-4353-A90E-C679045C8787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.UnitOfWork", "UnitOfWork\Inventory.UnitOfWork.csproj", "{AB426868-E0C1-4769-91F4-8099A2BCE459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.UnitOfWork", "UnitOfWork\Inventory.UnitOfWork.csproj", "{AB426868-E0C1-4769-91F4-8099A2BCE459}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

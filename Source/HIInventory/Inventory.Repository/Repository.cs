@@ -1,10 +1,9 @@
-﻿using Inventory.Data;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Inventory.Data;
 using Inventory.Repository.Contracts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 
 namespace Inventory.Repository
 {
