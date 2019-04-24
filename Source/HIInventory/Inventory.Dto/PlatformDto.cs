@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace Inventory.Dto
 {
     public class PlatformDto

@@ -1,6 +1,6 @@
 ﻿
-using Inventory.Dto;
 using System.Collections.Generic;
+using Inventory.Dto;
 
 namespace Inventory.Business.Contracts
 {
