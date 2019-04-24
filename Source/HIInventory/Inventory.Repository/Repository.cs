@@ -4,7 +4,6 @@ using Inventory.Data;
 using Inventory.Repository.Contracts;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Inventory.Repository
 {
     public class Repository<T> : IRepository<T>

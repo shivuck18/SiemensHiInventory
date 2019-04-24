@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Inventory.Dto;
 
 namespace Inventory.Business.Contracts
@@ -15,7 +14,6 @@ namespace Inventory.Business.Contracts
         void Update(PlatformDto platform);
 
         void Delete(int id);
-
-
+ 
     }
 }

@@ -4,7 +4,6 @@ using Inventory.Domain.Entities;
 using Inventory.Dto;
 using Inventory.UnitOfWork;
 
-
 namespace Inventory.Business
 {
     public class PlatformService : IPlatformService
@@ -23,7 +22,6 @@ namespace Inventory.Business
             _unitOfWork.Save();
         }
 
-       
         public List<PlatformDto> GetAll()
         {
             var platforms = _unitOfWork.PlatformRepository.GetAll();
@@ -37,7 +35,6 @@ namespace Inventory.Business
             return platformDtos;
         }
 
-       
         public PlatformDto GetById(int id)
         {
             var platform = _unitOfWork.PlatformRepository.GetById(id);

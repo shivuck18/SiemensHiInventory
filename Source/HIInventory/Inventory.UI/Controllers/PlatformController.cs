@@ -2,7 +2,6 @@
 using Inventory.Dto;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace Inventory.UI.Controllers
 {
     public class PlatformController : Controller
@@ -10,7 +9,6 @@ namespace Inventory.UI.Controllers
 
         private readonly IPlatformService _platformService;
 
-       
         public PlatformController(IPlatformService platformService)
         {
                _platformService = platformService;
@@ -33,7 +31,6 @@ namespace Inventory.UI.Controllers
         {
             return View();
         }
-
 
         [HttpPost]
         public IActionResult Add(PlatformDto PlatformDto)

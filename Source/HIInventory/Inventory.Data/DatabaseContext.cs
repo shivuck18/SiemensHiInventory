@@ -7,9 +7,7 @@ namespace Inventory.Data
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
-
         public DbSet<Platform> platforms { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
