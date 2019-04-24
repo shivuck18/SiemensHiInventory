@@ -4,6 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] Hi Inventory</title>
+    <link rel="stylesheet" href="~/lib/W3/CSS/w3.css">
+    <link rel="stylesheet" href="~/lib/W3/CSS/w3-theme-black.css">
+    <link rel="stylesheet" href="~/lib/W3/CSS/FontFamilyRoboto.css">
+    <link rel="stylesheet" href="~/lib/W3/CSS/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 300px;
+            top: 30px;
+            bottom: 0;
+            height: inherit;
+        }
+
+    </style>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -14,37 +32,49 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        
+
     </environment>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container" style="margin-left:5px">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Platform" asp-action="Index" class="navbar-brand">Hi Inventory</a>
+                    <img src="~/images/SiemensLogo.jpg" alt="SiemensLogo" style="margin-left:0px; margin-right:20px; padding:5px; width:250px;height:50px;">
             </div>
-            <div class="navbar-collapse collapse">
+
+            <div class="navbar-collapse collapse" style="font-size:25px">
+
                 <ul class="nav navbar-nav">
-                    @*<li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>*@
+
+                    <li><a asp-area="" asp-controller="Platform" asp-action="Index" >Hi Inventory</a></li>
+                        @*<li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>*@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
             </div>
         </div>
+
     </nav>
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <h3>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Hearing Instrument</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Platform</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Programming Adapter</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Price Point</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Family</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Firmware versions</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Programmers</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Dongle</a>
+            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Receivers</a>
+        </h3>
+</nav>
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class="container body-content"  style=" margin-left:300px">
         @RenderBody()
         <hr />
-        <footer>
+        <footer >
             <p>&copy; Siemens Audiology Team</p>
         </footer>
     </div>

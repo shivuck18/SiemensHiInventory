@@ -33,13 +33,23 @@
     .margin {
         margin-left: 75px;
     }
+
+    .width {
+        width: 75px;
+    }
 </style>
-<p>
-    <a asp-action="Add" class="margin btn btn-default">Add New</a>
-</p>
+<div class="page-header">
+    <div class="w3-text-blue">
+        <h1>PLATFORM</h1>
+    </div>
+</div>
+<div class="row" style="margin-top:10px">
+    <div class="col-md-10"></div>
+    <a asp-action="Add" class="margin btn btn-info">Add New</a>
+</div>
 <section>
     <div class="row">
-        <table class="table" id="TableId">
+        <table class="table" id="TableId" style="border:1px solid">
             <thead>
                 <tr>
                     <th>
@@ -51,7 +61,7 @@
                     <th>
                         @Html.DisplayNameFor(model => model.ICType)
                     </th>
-                    <th></th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -68,8 +78,8 @@
                             @Html.DisplayFor(modelItem => item.ICType)
                         </td>
                         <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-success" }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-success width" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger width" })
                         </td>
                     </tr>
                 }
