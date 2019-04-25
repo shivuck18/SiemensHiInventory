@@ -7,13 +7,24 @@ namespace Inventory.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
+        #region Fields
+
         private IRepository<Platform> _platformRepository;
+
         private DatabaseContext _databaseContext;
+
+        #endregion
+
+        #region Constructors
 
         public UnitOfWork(DatabaseContext databaseContext)
         {
             _databaseContext = databaseContext;
         }
+
+        #endregion
+
+        #region Actions
 
         public IRepository<Platform> PlatformRepository
         {
@@ -32,5 +43,7 @@ namespace Inventory.UnitOfWork
         {
             _databaseContext.SaveChanges();
         }
+
+        #endregion
     }
 }

@@ -5,7 +5,9 @@ namespace Inventory.Data
 {
     public class DatabaseContext : DbContext
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) 
+            : base(options)
+        { }
 
         public DbSet<Platform> platforms { get; set; }
 

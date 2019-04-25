@@ -8,12 +8,22 @@ namespace Inventory.Business
 {
     public class PlatformService : IPlatformService
     {
+        #region Fields
+
         private readonly IUnitOfWork _unitOfWork;
+
+        #endregion
+
+        #region Constructors
+
         public PlatformService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
+        #endregion
+
+        #region Actions
 
         public void Add(PlatformDto platformDto)
         {
@@ -77,5 +87,7 @@ namespace Inventory.Business
 
             return PlatformDto;
         }
+
+        #endregion
     }
 }

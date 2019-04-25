@@ -4,12 +4,16 @@ namespace Inventory.Domain.Entities
 {
     public class Platform
     {
+        #region Properties
+
         [Key]
         public int Id { get; set; }
 
         public string PlatformName { get; set; }
 
         public string ICType { get; set; }
+
+        #endregion
 
     }
 }
