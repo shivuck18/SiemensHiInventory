@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Hi Inventory</title>
+    <link rel="icon" href="~/images/Inventory.ico" type="image/x-icon" />
+    <title>@ViewData["Title"] HI Inventory</title>
     <link rel="stylesheet" href="~/lib/W3/CSS/w3.css">
     <link rel="stylesheet" href="~/lib/W3/CSS/w3-theme-black.css">
     <link rel="stylesheet" href="~/lib/W3/CSS/FontFamilyRoboto.css">
     <link rel="stylesheet" href="~/lib/W3/CSS/font-awesome.min.css">
+    <link rel='stylesheet' href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
         html, body, h1, h2, h3, h4, h5, h6 {
             font-family: "Roboto", sans-serif;
@@ -15,12 +17,22 @@
 
         .w3-sidebar {
             z-index: 3;
-            width: 300px;
+            width: 310px;
             top: 30px;
             bottom: 0;
             height: inherit;
         }
-
+        .fa-fw {
+            color: #3c8dbc;
+        }
+        .collapse {
+            font-size:25px;
+        }
+        .UserImage {
+            padding: 5px;
+            width: 75px;
+            border-radius: 50%;
+        }
     </style>
 
     <environment include="Development">
@@ -36,38 +48,62 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #3c8dbc">
         <div class="container" style="margin-left:5px">
             <div class="navbar-header">
                     <img src="~/images/SiemensLogo.jpg" alt="SiemensLogo" style="margin-left:0px; margin-right:20px; padding:5px; width:250px;height:50px;">
             </div>
 
-            <div class="navbar-collapse collapse" style="font-size:25px">
-
+            <div class="navbar-collapse collapse" >
                 <ul class="nav navbar-nav">
-
-                    <li><a asp-area="" asp-controller="Platform" asp-action="Index" >Hi Inventory</a></li>
-                        @*<li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>*@
+                    <li><a asp-area="" asp-controller="Platform" asp-action="Index">HI Inventory</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
             </div>
         </div>
-
     </nav>
-    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-light w3-animate-left" id="mySidebar">
         <h3>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Hearing Instrument</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Platform</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Programming Adapter</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Price Point</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Family</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Firmware versions</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Programmers</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Dongle</a>
-            <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="Platform" asp-action="Index">Receivers</a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-assistive-listening-systems fa-fw"></i>
+                Hearing Instrument
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class='fab fa-product-hunt fa-fw'></i>
+                Platform
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-plug fa-fw"></i>
+                Programming Adapter
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-dollar-sign fa-fw"></i>
+                Price Point
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-sitemap fa-fw"></i>
+                Family
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-copy fa-fw"></i>
+                Firmware versions
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-memory fa-fw"></i>
+                Programmers
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-rss fa-fw"></i>
+                Dongle
+            </a>
+            <a class="w3-bar-item w3-button w3-hover-grey" style="text-decoration:none" asp-area="" asp-controller="Platform" asp-action="Index">
+                <i class="fas fa-phone fa-fw"></i>
+                Receivers
+            </a>
         </h3>
-</nav>
+    </nav>
 
     <partial name="_CookieConsentPartial" />
 
