@@ -6,6 +6,7 @@ namespace Inventory.Dto
 {
     public class PlatformDto
     {
+        [Key]
         [BindProperty, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
