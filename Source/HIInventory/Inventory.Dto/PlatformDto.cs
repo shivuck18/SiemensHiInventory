@@ -9,8 +9,7 @@ namespace Inventory.Dto
         #region Properties
 
         [Key]
-        [BindProperty, Required]
-
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
