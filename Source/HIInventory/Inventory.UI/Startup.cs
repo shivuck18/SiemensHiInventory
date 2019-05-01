@@ -3,14 +3,17 @@ using Inventory.Business.Contracts;
 using Inventory.Data;
 using Inventory.Repository;
 using Inventory.Repository.Contracts;
+using Inventory.UI.Extensions;
 using Inventory.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net;
 
 namespace Inventory.UI
 {
@@ -53,10 +56,10 @@ namespace Inventory.UI
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Home/About");
                 app.UseHsts();
             }
-
+            app.ConfigureExceptionHandler();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
