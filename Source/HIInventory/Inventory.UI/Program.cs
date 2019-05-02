@@ -5,11 +5,19 @@ namespace Inventory.UI
 {
     public class Program
     {
+        /// <summary>
+        /// Main Function
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
         }
-
+        /// <summary>
+        /// get an instance of webhost builder
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();

@@ -17,7 +17,7 @@ namespace Inventory.UI.Controllers
         /// <summary>
         /// function to return list of platform 
         /// </summary>
-        /// <returns>list of platform from database</returns>
+       
         public IActionResult Index()
         {
             return View(_platformService.GetAll());
@@ -27,6 +27,7 @@ namespace Inventory.UI.Controllers
         /// function for add 
         /// </summary>
         /// <returns>add page to add new platform</returns>
+        
         public IActionResult Add()
         {
             return View();
@@ -39,6 +40,11 @@ namespace Inventory.UI.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        /// <summary>
+        /// function for Edit
+        /// </summary>
+        /// <returns>Edit page to edit new platform</returns>
+
         public IActionResult Edit(int id)
         {
            var platform =_platformService.GetById(id);
@@ -46,12 +52,21 @@ namespace Inventory.UI.Controllers
         }
 
         [HttpPost]
+
+        /// <summary>
+        /// function for Saving data
+        /// </summary>
+        
         public IActionResult Save(PlatformDto platformDto)
         {
             _platformService.Update(platformDto);
             return RedirectToAction(nameof(Index));
         }
 
+        /// <summary>
+        /// function for deleting data
+        /// </summary>
+        
         public IActionResult Delete(int id)
         {
             _platformService.Delete(id);

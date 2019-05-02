@@ -7,7 +7,9 @@ namespace Inventory.Dto
     public class PlatformDto
     {
         #region Properties
-
+        /// <summary>
+        /// Attributes used for Validation of PlatForm Name and ICType
+        /// </summary>
         [Key]
         
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

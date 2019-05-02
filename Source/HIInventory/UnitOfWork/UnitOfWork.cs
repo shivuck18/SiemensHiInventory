@@ -25,7 +25,9 @@ namespace Inventory.UnitOfWork
         #endregion
 
         #region Actions
-
+        /// <summary>
+        /// Constructor for Platform Repository
+        /// </summary>
         public IRepository<Platform> PlatformRepository
         {
             get
