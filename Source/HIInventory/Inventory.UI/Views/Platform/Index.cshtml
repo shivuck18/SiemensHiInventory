@@ -21,9 +21,18 @@
                 "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]]
 
             });
-
-
     });
+    $(document).ready(function () {
+        $('form[action$="/Delete"]').submit(function () {
+            return confirm('Are you sure you want to delete ?');
+        });
+    }); 
+
+    function deletConfirmation() {
+        if (!confirm("Are you sure you want to delete ?"))
+            event.preventDefault();
+    }
+
 </script>
 <style>
     #TableId_wrapper {
@@ -81,7 +90,8 @@
                         </td>
                         <td>
                             @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-success width" }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger width" })
+                            @*@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger width" })*@
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger width", @onclick = "deletConfirmation()" })
                         </td>
                     </tr>
                 }
