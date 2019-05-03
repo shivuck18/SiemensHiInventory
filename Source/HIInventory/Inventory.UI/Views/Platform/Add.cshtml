@@ -4,6 +4,11 @@
     ViewData["Title"] = "Add";
 }
 <script src="~/js/jquery.js"></script>
+<script>
+    function alertFunction() {
+        alert("Entry added successfully!!");
+    }
+</script>
 <h3>Add Platform</h3>
 <hr />
 <div class="row">
@@ -26,7 +31,7 @@
                 <span asp-validation-for="ICType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Add" class="btn btn-default" />
+                <input type="submit" value="Add" class="btn btn-default" onclick="alertFunction()" />
             </div>
         </form>
     </div>
