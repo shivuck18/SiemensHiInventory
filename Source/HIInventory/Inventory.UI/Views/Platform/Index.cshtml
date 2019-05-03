@@ -22,13 +22,14 @@
 
             });
     });
-    $(document).ready(function () {
-        $('form[action$="/Delete"]').submit(function () {
-            return confirm('Are you sure you want to delete ?');
-        });
-    }); 
 
-    function deletConfirmation() {
+    //$(document).ready(function () {
+    //    $('form[action$="/Delete"]').submit(function () {
+    //        return confirm('Are you sure you want to delete ?');
+    //    });
+    //}); 
+
+      function deletConfirmation() {
         if (!confirm("Are you sure you want to delete ?"))
             event.preventDefault();
     }
@@ -89,8 +90,7 @@
                             @Html.DisplayFor(modelItem => item.ICType)
                         </td>
                         <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-success width" }) |
-                            @*@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger width" })*@
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-success width" })
                             @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger width", @onclick = "deletConfirmation()" })
                         </td>
                     </tr>
