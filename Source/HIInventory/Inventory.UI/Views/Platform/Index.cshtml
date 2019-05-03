@@ -14,7 +14,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#TableId').DataTable(
+        $('#PaginationId').DataTable(
             {
                 "pageLength": 5,
                 "sPaginationType": "full_numbers",
@@ -36,7 +36,7 @@
 
 </script>
 <style>
-    #TableId_wrapper {
+    #PaginationId_wrapper {
         width: 90%;
         margin-left: 75px;
     }
@@ -49,6 +49,10 @@
     .width {
         width: 75px;
     }
+    .table {
+        border: 1px solid
+    }
+
 </style>
 <div class="page-header">
     <div class="w3-text-blue">
@@ -61,7 +65,7 @@
 </div>
 <section>
     <div class="row">
-        <table class="table" id="TableId" style="border:1px solid">
+        <table class="table" id="PaginationId">
             <thead>
                 <tr>
                     @*<th>
